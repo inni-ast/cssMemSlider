@@ -27,10 +27,9 @@ aside {
 html,
 body {
 	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
+	width: 100%;	
+    font-size: 100%;
+	line-height: 1;	
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -90,16 +89,129 @@ a {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
+  height: 100%;  
+  box-sizing: border-box; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem; 
   background-color:  var(--color-body);
   color: var(--color-black);
+ 
 }
 
 .wrapper {
-  width: 95%;
-  height: 95%;
-  margin: 3% auto;
-  background-color: var(--color-slider);
+    max-height: 100vh;
+    width: calc(100% - 5vw);
+    margin: 0 auto;
+    padding: 1rem;
 }
 
+
+.slider {    
+    display: flex; 
+    flex-direction: column;
+
+    
+
+    
+}
+.slide__images {
+    width: 100%;
+    height: 80vh;
+
+    overflow: hidden;
+    
+}
+.slide {
+    display: flex;
+    flex-direction: column;    
+}
+.slide__image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 80vh;
+    border-radius: 2%;
+}
+.slide__img {
+  height: 100%;
+width: 100%;
+  max-width: 100%;
+object-fit: cover;
+  border-radius: 2%;
+  z-index: 1;  
+  margin-bottom: 1.5rem;
+  
+
+}
+.slide__description {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1rem;
+}
+.slide__text {
+}
+.slide__pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: -0.3rem;
+}
+.pagination__item {
+  cursor: pointer;
+  width: 1.3rem;
+  height: 1.3rem;  
+}
+
+.pagination__link {
+  display: flex;
+  background-color: var(--color-black);
+  border: 0.1rem var(--color-black) solid;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  transition: all 0.4s;
+
+}
+.active-link {
+    background-color: var(--color-body);
+}
+.pagination__link:hover {
+    background-color: var(--color-slider);
+}
+.pagination__link:active {
+    background-color: var(--color-white);
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+}
+.pagination__link:target {
+    background-color: var(--color-body);
+}
+.pagination__img {
+}
+/* #one:target {
+display: block;
+}
+#two:target {
+display: block;
+}
+#three:target {
+display: block;
+}
+#four:target {
+display: block;
+} */
+
+@media (max-width: 768px) {
+    .slide__description {
+        flex-direction: column;
+    }
+    .slide__pagination {
+        order: -1;
+    }
+    .slide__text {
+        align-self: flex-start;
+    }
+}
+    
