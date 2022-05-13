@@ -140,6 +140,7 @@ object-fit: cover;
   justify-content: space-between;
 }
 .slide__text {
+    
 }
 .slide__pagination {
   display: flex;
@@ -169,7 +170,7 @@ object-fit: cover;
 .pagination__item:active {
     background-color: var(--color-white);
     transform: translateY(0.5rem);
-    transition: all 0.4s;
+    transition: 0.3s;
 }
 
 #one, #two, #three, #four {
@@ -187,18 +188,30 @@ object-fit: cover;
 #button-four:checked ~ #four {
    display: flex;
 }
-
+@keyframes move {
+    from {
+        transform:  translateX(12rem);
+    }
+    to {
+        transform:  translateX(0);
+    }
+    
+  }
 #button-one:checked ~ .slide__description .text #text-one {
-    display: block;
+    order: -1;
+    animation: move 3s;
 }
 #button-two:checked ~ .slide__description .text #text-two {
-    display: block;
+    order: -1;    
+    animation: move 3s;
 }
 #button-three:checked ~ .slide__description .text #text-three {
-    display: block;
+    order: -1;
+    animation: move 3s;
 }
 #button-four:checked ~ .slide__description .text #text-four {
-    display: block;
+    order: -1;
+    animation: move 3s;
 }
 #button-one:checked ~  .slide__description .slide__pagination #dot-one span,
 #button-two:checked ~ .slide__description .slide__pagination #dot-two span,
@@ -212,10 +225,24 @@ object-fit: cover;
     opacity: 0;
     visibility: hidden;
 }
-
-.text p {
-    display: none;
+// скрывать текст
+.text {
+     
 }
+.slide__text {
+    flex: 1 0 32rem;    
+    transition: all 0.5s;   
+      
+}
+.hidden {
+    display: flex;
+    align-items: center;
+    width: 32rem;
+    overflow: hidden;
+}
+
+
+
 @media (max-width: 768px) {
     .slide__description {
         flex-direction: column;
@@ -226,4 +253,48 @@ object-fit: cover;
     .text {
         align-self: flex-start;
     }
+    /* .slide__text {
+        flex: 1 0 20rem;    
+        transition: all 0.5s;   
+          
+    }
+    .hidden {
+        width: 20rem;
+
+    } */
 }
+
+@media (max-width: 600px) {
+.slide__text {
+        flex: 1 0 25rem;    
+        transition: all 0.5s;   
+          
+    }
+    .hidden {
+        width: 25rem;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .slide__text {
+            flex: 1 0 24rem;    
+            transition: all 0.5s;   
+              
+        }
+        .hidden {
+            width: 24rem;
+    
+        }
+    }
+@media (max-width: 400px) {
+    .slide__text {
+            flex: 1 0 16rem;    
+            transition: all 0.5s;   
+              
+        }
+        .hidden {
+            width: 16rem;
+    
+        }
+    }
