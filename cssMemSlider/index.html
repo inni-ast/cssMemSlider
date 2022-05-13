@@ -14,39 +14,50 @@
 <body>
     <div class="wrapper">
         <div class="slider">
-            <div class="slide__images">
-                <div class="slide slide__one" id="one">
-                    <div class="slide__image">
-                        <img src="./assets/img/tablet/1-2.jpg" alt="slide__image" class="slide__img">
-                    </div>
+            <input type="radio" id="button-one" name="scales" checked>
+            <input type="radio" id="button-two" name="scales">
+            <input type="radio" id="button-three" name="scales">
+            <input type="radio" id="button-four" name="scales">
+            <div class="slide slide__one" id="one">
+                <div class="slide__image">
+                    <img src="./assets/img/tablet/1-2.jpg" alt="slide__image" class="slide__img">
                 </div>
-                <div class="slide slide__two" id="two">
-                    <div class="slide__image">
-                        <img src="./assets/img/tablet/2-2.jpg" alt="slide__image" class="slide__img">
-                    </div>
+            </div>
+            <div class="slide slide__two" id="two">
+                <div class="slide__image">
+                    <img src="./assets/img/tablet/2-2.jpg" alt="slide__image" class="slide__img">
                 </div>
-                <div class="slide slide__three" id="three">
-                    <div class="slide__image">
-                        <img src="./assets/img/tablet/3-2.jpg" alt="slide__image" class="slide__img">
-                    </div>
+            </div>
+            <div class="slide slide__three" id="three">
+                <div class="slide__image">
+                    <img src="./assets/img/tablet/3-2.jpg" alt="slide__image" class="slide__img">
                 </div>
-                <div class="slide slide__four" id="four">
-                    <div class="slide__image">
-                        <img src="./assets/img/tablet/4-2.jpg" alt="slide__image" class="slide__img">
-                    </div>
+            </div>
+            <div class="slide slide__four" id="four">
+                <div class="slide__image">
+                    <img src="./assets/img/tablet/4-2.jpg" alt="slide__image" class="slide__img">
                 </div>
             </div>
             <div class="slide__description">
-                <p class="slide__text">Прывітанне! Давай сябраваць!</p>
-                <ul class="slide__pagination">
-                    <li class="pagination__item"><a href="#one" class="pagination__link"></a></li>
-                    <li class="pagination__item"><a href="#two" class="pagination__link"></a></li>
-                    <li class="pagination__item"><a href="#three" class="pagination__link"></a></li>
-                    <li class="pagination__item"><a href="#four" class="pagination__link"></a></li>
-                </ul>
+            <div class="text">
+                <p class="slide__text" id="text-one">Прывітанне! Давай сябраваць!</p>
+                <p class="slide__text" id="text-two">Я за вамі назіраю...</p>
+                <p class="slide__text" id="text-three">А я ўжо салодка сплю!..</p>
+                <p class="slide__text" id="text-four">Адважным кацянятам усё-усё па лапам!</p>
+            </div>
+            <div class="slide__pagination">
+                <label id="dot-one" for="button-one">
+                    <span class="pagination__item"></span>
+                </label>
+                <label id="dot-two" for="button-two"><span class="pagination__item"></span></label>
+                <label id="dot-three" for="button-three"><span class="pagination__item"></span></label>
+                <label id="dot-four" for="button-four"><span class="pagination__item"></span></label>
+            </div>
             </div>
 
         </div>
+
+
     </div>
 </body>
 
