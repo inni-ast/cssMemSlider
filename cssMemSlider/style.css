@@ -110,14 +110,22 @@ body {
     width: 100%;
     height: 80vh;
     border-radius: 1%;
-
-    /* overflow: hidden; */
     
+}
+
+.slide__images {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1%;
+
 }
 .slide {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column; 
+    flex: 0 0 100%;
 }
+
 .slide__image {
     display: flex;
     align-items: center;
@@ -174,44 +182,56 @@ object-fit: cover;
 }
 
 #one, #two, #three, #four {
-    display: none;
+    
 }
-#button-one:checked ~ #one {
-    display: flex;
+#button-one:checked ~ .slide__images #one {
+    order: -1;
+    animation: move 3s;
 }
-#button-two:checked ~ #two {
-    display: flex;
+#button-two:checked ~ .slide__images #two {
+    order: -1;
+    animation: move 3s;
 }
-#button-three:checked ~ #three {
-   display: flex;
+#button-three:checked ~ .slide__images #three {
+    order: -1;
+    animation: move 3s;
 }
-#button-four:checked ~ #four {
-   display: flex;
+#button-four:checked ~ .slide__images #four {
+    order: -1;
+    animation: move 3s;
 }
 @keyframes move {
     from {
-        transform:  translateX(12rem);
+        transform:  translateX(100%);
     }
     to {
         transform:  translateX(0);
-    }
-    
+    }    
   }
+@keyframes move-text {
+    from {
+        transform:  rotateX(-150deg);
+    }
+    to {
+        transform:  rotateX(0);
+    }    
+  }
+  
 #button-one:checked ~ .slide__description .text #text-one {
     order: -1;
-    animation: move 3s;
+    animation: move-text 5s;
 }
 #button-two:checked ~ .slide__description .text #text-two {
     order: -1;    
-    animation: move 3s;
+    animation: move-text 5s;
 }
 #button-three:checked ~ .slide__description .text #text-three {
     order: -1;
-    animation: move 3s;
+    animation: move-text 5s;
 }
 #button-four:checked ~ .slide__description .text #text-four {
     order: -1;
-    animation: move 3s;
+    animation: move-text 5s;
 }
 #button-one:checked ~  .slide__description .slide__pagination #dot-one span,
 #button-two:checked ~ .slide__description .slide__pagination #dot-two span,
@@ -231,8 +251,7 @@ object-fit: cover;
 }
 .slide__text {
     flex: 1 0 32rem;    
-    transition: all 0.5s;   
-      
+          
 }
 .hidden {
     display: flex;
@@ -252,16 +271,7 @@ object-fit: cover;
     }
     .text {
         align-self: flex-start;
-    }
-    /* .slide__text {
-        flex: 1 0 20rem;    
-        transition: all 0.5s;   
-          
-    }
-    .hidden {
-        width: 20rem;
-
-    } */
+    }    
 }
 
 @media (max-width: 600px) {
@@ -288,6 +298,9 @@ object-fit: cover;
         }
     }
 @media (max-width: 400px) {
+    body {
+        font-size: 1.3rem;
+    }
     .slide__text {
             flex: 1 0 16rem;    
             transition: all 0.5s;   
