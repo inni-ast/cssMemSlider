@@ -99,16 +99,16 @@ body {
 }
 
 .wrapper {
-    max-height: 100vh;
+    height: 100%;
     width: calc(100% - 5vw);
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1vh;
 }
 
 
 .slider {
     width: 100%;
-    height: 90vh;
+    height: 98vh;
     border-radius: 1%;
     
 }
@@ -306,6 +306,9 @@ object-fit: cover;
         .hidden {
             width: 24rem;
     
+        }
+        .slide__img {        
+          margin-bottom: 0.7rem;
         }
     }
 @media (max-width: 400px) {
