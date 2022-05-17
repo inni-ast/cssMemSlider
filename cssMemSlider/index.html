@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/icons/favicon-bird.ico" type="image/x-icon">
+    <title>CSS Mem Slider</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="slider">
+            <input type="radio" id="button-one" name="scales" checked>
+            <input type="radio" id="button-two" name="scales">
+            <input type="radio" id="button-three" name="scales">
+            <input type="radio" id="button-four" name="scales">
+            <div class="slide__images">
+                <div class="slide slide__one" id="one">
+                    <div class="slide__image">
+                        <img src="./assets/img/tablet/1-2.jpg" alt="slide__image" class="slide__img">
+                    </div>
+                </div>
+                <div class="slide slide__two" id="two">
+                    <div class="slide__image">
+                        <img src="./assets/img/tablet/2-2.jpg" alt="slide__image" class="slide__img">
+                    </div>
+                </div>
+                <div class="slide slide__three" id="three">
+                    <div class="slide__image">
+                        <img src="./assets/img/tablet/3-2.jpg" alt="slide__image" class="slide__img">
+                    </div>
+                </div>
+                <div class="slide slide__four" id="four">
+                    <div class="slide__image">
+                        <img src="./assets/img/tablet/4-2.jpg" alt="slide__image" class="slide__img">
+                    </div>
+                </div>
+            </div>
+            <div class="slide__description">
+                <div class="text">
+                    <div class="hidden">
+                        <p class="slide__text" id="text-one">Прывітанне! Давай сябраваць!</p>
+                        <p class="slide__text" id="text-two">Я за вамі назіраю...</p>
+                        <p class="slide__text" id="text-three">А я ўжо салодка сплю!..</p>
+                        <p class="slide__text" id="text-four">
+                            Адважным кацянятам усё-усё па лапам!</p>
+                    </div>
+                </div>
+                <div class="slide__pagination">
+                    <label id="dot-one" for="button-one">
+                        <span class="pagination__item"></span>
+                    </label>
+                    <label id="dot-two" for="button-two"><span class="pagination__item"></span></label>
+                    <label id="dot-three" for="button-three"><span class="pagination__item"></span></label>
+                    <label id="dot-four" for="button-four"><span class="pagination__item"></span></label>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
